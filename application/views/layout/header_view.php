@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Smart Farmers</title>
+    <title>HRDI Smart Farmers</title>
     <!-- Favicon-->
     <link rel="icon" href="<?=base_url()?>asset/images/favicon.ico" type="image/x-icon">
 
@@ -15,6 +15,9 @@
 
     <!-- Bootstrap Core Css -->
     <link href="<?=base_url()?>asset/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- JQuery DataTable Css -->
+    <link href="<?=base_url()?>asset/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- Waves Effect Css -->
     <link href="<?=base_url()?>asset/plugins/node-waves/waves.css" rel="stylesheet" />
@@ -52,7 +55,7 @@
     <!-- Sweet Alert Css -->
     <link href="<?=base_url()?>asset/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 
-    <!--WaitMe Css-->
+    <!-- WaitMe Css -->
     <link href="<?=base_url()?>asset/plugins/waitme/waitMe.css" rel="stylesheet" />
 
     <!-- Morris Css -->
@@ -71,20 +74,20 @@
     <link rel="stylesheet" href="<?=base_url()?>asset/css/font-awesome.css">
 
     <!-- Gauge Chart -->
-    <link rel="stylesheet" href="<?=base_url()?>asset/plugins/gauge-chart/gauge_style.css">
-    <link rel="stylesheet" href="<?=base_url()?>asset/plugins/gauge-chart/gauge_style-2.css">
+    <link rel="stylesheet" title="GaugeChart" href="<?=base_url()?>asset/plugins/gauge-chart/gauge_style.css?version=#">
 
+    <!-- circliful -->
+    <link rel="stylesheet" href="<?=base_url()?>asset/plugins/cloudflare/jquery.circliful.css">
 
-    <?php 
-        if(isset($css)) {
-            foreach($css as $cs)
-            {
-                echo "<link href=\"$cs\" rel=\"stylesheet\">\n";
-            }
-        }
+    <!-- Date Range Picker -->
+    <link rel="stylesheet" href="<?=base_url()?>asset/plugins/daterangepicker/daterangepicker.css" />
 
-    ?>
+    
+
+    
+    
 </head>
+
 
 <body class="ls-closed theme-light-blue">
     <!-- Page Loader -->
@@ -107,17 +110,7 @@
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
     <!-- #END# Overlay For Sidebars -->
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <div class="search-icon">
-            <i class="material-icons">search</i>
-        </div>
-        <input type="text" placeholder="START TYPING...">
-        <div class="close-search">
-            <i class="material-icons">close</i>
-        </div>
-    </div>
-    <!-- #END# Search Bar -->
+    
     <!-- Top Bar -->
     <nav class="navbar">
         <div class="container-fluid">
@@ -125,7 +118,6 @@
                 <a href="javascript:void(0);" class="bars"></a>
                 <a class="navbar-brand" href="<?=base_url()?>">HRDI Smart Farmers</a>
             </div>
-            
         </div>
     </nav>
     <!-- #Top Bar -->
@@ -139,32 +131,54 @@
                     
                     <li <?php if($active == 'home'){ echo 'class="active"';} ?> >
                         <a href="<?=base_url()?>">
-                            <i class="material-icons">home</i>
-                            <span>หน้าแรก</span>
+                            <i class="material-icons">widgets</i>
+                            <span>มอนิเตอร์</span>
                         </a>
                     </li>
 
+                <?php if($this->session->group != 'Admin'){ ?>
+                    <li <?php if($active == 'controlsensor'){ echo 'class="active"';} ?> >
+                        <a href="<?=base_url()?>controlsensor">
+                            <i class="material-icons">touch_app</i>
+                            <span>ควบคุม</span>
+                        </a>
+                    </li>
+
+                    <li <?php if($active == 'setprogram'){ echo 'class="active"';} ?> >
+                        <a href="<?=base_url()?>setprogram">
+                            <i class="material-icons">assignment</i>
+                            <span>ตั้งโปรแกรม</span>
+                        </a>
+                    </li>
+                <?php } ?>  
+                  
                     <li <?php if($active == 'graph'){ echo 'class="active"';} ?> >
                         <a href="<?=base_url()?>graph">
                             <i class="material-icons">show_chart</i>
                             <span>กราฟข้อมูล</span>
                         </a>
                     </li>
-                    <li <?php if($active == 'image'){ echo 'class="active"';} ?> >
-                        <a href="<?=base_url()?>image">
-                            <i class="material-icons">wallpaper</i>
-                            <span>รูปภาพ</span>
+
+                <?php if($this->session->group == 'Supper_admin'){ ?>
+                    <li <?php if($active == 'log_control' || $active == 'log_program'){ echo 'class="active"';} ?> >
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">format_list_bulleted</i>
+                            <span>Log</span>
                         </a>
+                        <ul class="ml-menu">
+                            <li <?php if($active == 'log_control'){ echo 'class="active"';} ?> >
+                                <a href="<?=base_url()?>log/log_control">
+                                    <span>Log ควบคุม</span>
+                                </a>
+                            </li>
+                            <li <?php if($active == 'log_program'){ echo 'class="active"';} ?> >
+                                <a href="<?=base_url()?>log/log_program">
+                                    <span>Log ตั้งโปรแกรม</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
-                    
-                    <?php if($this->session->group == 'Supper_admin'){ ?>
-                        <li <?php if($active == 'monitor'){ echo 'class="active"';} ?> >
-                            <a href="<?=base_url()?>monitor">
-                                <i class="material-icons">list</i>
-                                <span>มอนิเตอร์</span>
-                            </a>
-                        </li>
-                    <?php } ?>
+                <?php } ?>  
                     
                     <li <?php if($active == 'change_pass'){ echo 'class="active"';} ?> >
                         <a href="<?=base_url()?>change_pass">

@@ -38,7 +38,12 @@ class Onload{
                     exit();
                 }
                 
-                if( $type_user == 'Admin' && ($controller == "relay" || $controller == "zone" || $controller == "sensor" || $controller == "gauge") ){
+                if( $type_user == 'Admin' && ($controller == "controlsensor" || $controller == "setprogram" || $controller == "log" ) ){
+                    redirect("","refresh");
+                    exit();
+                }
+
+                if( $type_user == 'User' && ($controller == "log" ) ){
                     redirect("","refresh");
                     exit();
                 }

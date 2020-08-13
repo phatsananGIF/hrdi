@@ -1,21 +1,22 @@
-.gauge-color-red {
-  stop-color: #e23131;
+/*--- #gaugeT1 ---*/
+.gaugeT1-color-red {
+  stop-color: #ec643b;
 }
 
-.gauge-color-orange {
+.gaugeT1-color-orange {
   stop-color: #ed811c;
 }
 
-.gauge-color-yellow {
+.gaugeT1-color-yellow {
   stop-color: #fbe500;
 }
 
-.gauge-color-lightgreen {
+.gaugeT1-color-lightgreen {
   stop-color: #a7db29;
 }
 
-.gauge-color-green {
-  stop-color: #25cd6b;
+.gaugeT1-color-green {
+  stop-color: #84db52;
 }
 
 
@@ -23,14 +24,14 @@
   visibility: hidden;
 }
 
-.gauge-container {
+.gaugeT1-container {
   padding: 20px;
   margin-top: 10px;
   display: flex;
   justify-content: space-around;
 }
 
-.gauge {
+.gaugeT1 {
   /*
   height: 100%;
   width: 100%;
@@ -39,74 +40,733 @@
   width: 100%;
 }
 
-.gauge .dxg-range.dxg-background-range {
-  fill: url(#gradientGauge);
+.gaugeT1 .dxg-range.dxg-background-range {
+  fill: url(#gradientGaugeT1);
 }
 
-
-.gauge .dxg-line {
+.gaugeT1 .dxg-line {
   -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
           transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
 }
 
-.gauge .dxg-line path:first-child,
-.gauge .dxg-line path:last-child {
+.gaugeT1 .dxg-line path:first-child,
+.gaugeT1 .dxg-line path:last-child {
   display: none;
 }
 
-.gauge .dxg-line path:nth-child(2) {
+.gaugeT1 .dxg-line path{
+  stroke: #777;
+}
+/*
+.gaugeT1 .dxg-line path:nth-child(2) {
   stroke: #25cd6b;
 }
 
-.gauge .dxg-line path:nth-child(3) {
+.gaugeT1 .dxg-line path:nth-child(3) {
   stroke: #a7db29;
 }
 
-.gauge .dxg-line path:nth-child(4) {
+.gaugeT1 .dxg-line path:nth-child(4) {
   stroke: #fbe500;
 }
 
-.gauge .dxg-line path:nth-child(5) {
+.gaugeT1 .dxg-line path:nth-child(5) {
   stroke: #ed811c;
 }
 
-.gauge .dxg-line path:nth-child(6) {
+.gaugeT1 .dxg-line path:nth-child(6) {
   stroke: #e23131;
 }
+*/
 
-
-.gauge .dxg-elements text:first-child {
+.gaugeT1 .dxg-elements text:first-child {
   -webkit-transform: translate(19px, 13px);
           transform: translate(19px, 13px);
 }
 
-.gauge .dxg-elements text:last-child {
+.gaugeT1 .dxg-elements text:last-child {
   -webkit-transform: translate(-27px, 14px);
           transform: translate(-27px, 14px);
 }
 
-.gauge .dxg-value-indicator path {
+.gaugeT1 .dxg-value-indicator path {
   -webkit-transform: scale(1.2) translate(0, -5px);
           transform: scale(1.2) translate(0, -5px);
   -webkit-transform-origin: center center;
           transform-origin: center center;
 }
 
-.gauge .dxg-value-indicator .dxg-title {
+.gaugeT1 .dxg-value-indicator .dxg-title {
   text-transform: uppercase;
 }
 
-.gauge .dxg-value-indicator .dxg-title text:first-child {
+.gaugeT1 .dxg-value-indicator .dxg-title text:first-child {
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
 }
 
-.gauge .dxg-value-indicator .dxg-spindle-border:nth-child(4),
-.gauge .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+.gaugeT1 .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+.gaugeT1 .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
   -webkit-transform: translate(0, -109px);
           transform: translate(0, -109px);
 }
 
-.gauge .dxg-value-indicator .dxg-spindle-hole {
+.gaugeT1 .dxg-value-indicator .dxg-spindle-hole {
+  fill: #ffffff;
+}
+
+
+
+/*--- #gaugeH1 ---*/
+.gaugeH1-color-red {
+  stop-color: #ec643b;
+}
+
+.gaugeH1-color-orange {
+  stop-color: #ed811c;
+}
+
+.gaugeH1-color-yellow {
+  stop-color: #fbe500;
+}
+
+.gaugeH1-color-lightgreen {
+  stop-color: #a7db29;
+}
+
+.gaugeH1-color-green {
+  stop-color: #84db52;
+}
+
+.gradient-mask {
+  visibility: hidden;
+}
+
+.gaugeH1-container {
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gaugeH1 {
+  height: 200px;
+  width: 100%;
+}
+
+.gaugeH1 .dxg-range.dxg-background-range {
+  fill: url(#gradientGaugeH1);
+}
+
+.gaugeH1 .dxg-line {
+  -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+          transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+}
+
+.gaugeH1 .dxg-line path:first-child,
+.gaugeH1 .dxg-line path:last-child {
+  display: none;
+}
+
+.gaugeH1 .dxg-line path{
+  stroke: #777;
+}
+
+.gaugeH1 .dxg-elements text:first-child {
+  -webkit-transform: translate(19px, 13px);
+          transform: translate(19px, 13px);
+}
+
+.gaugeH1 .dxg-elements text:last-child {
+  -webkit-transform: translate(-27px, 14px);
+          transform: translate(-27px, 14px);
+}
+
+.gaugeH1 .dxg-value-indicator path {
+  -webkit-transform: scale(1.2) translate(0, -5px);
+          transform: scale(1.2) translate(0, -5px);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.gaugeH1 .dxg-value-indicator .dxg-title {
+  text-transform: uppercase;
+}
+
+.gaugeH1 .dxg-value-indicator .dxg-title text:first-child {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.gaugeH1 .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+.gaugeH1 .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+  -webkit-transform: translate(0, -109px);
+          transform: translate(0, -109px);
+}
+
+.gaugeH1 .dxg-value-indicator .dxg-spindle-hole {
+  fill: #ffffff;
+}
+
+
+
+
+/*--- #gaugeT2 ---*/
+.gaugeT2-color-red {
+  stop-color: #ec643b;
+}
+
+.gaugeT2-color-orange {
+  stop-color: #ed811c;
+}
+
+.gaugeT2-color-yellow {
+  stop-color: #fbe500;
+}
+
+.gaugeT2-color-lightgreen {
+  stop-color: #a7db29;
+}
+
+.gaugeT2-color-green {
+  stop-color: #84db52;
+}
+
+.gradient-mask {
+  visibility: hidden;
+}
+
+.gaugeT2-container {
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gaugeT2 {
+  height: 200px;
+  width: 100%;
+}
+
+.gaugeT2 .dxg-range.dxg-background-range {
+  fill: url(#gradientGaugeT2);
+}
+
+.gaugeT2 .dxg-line {
+  -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+          transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+}
+
+.gaugeT2 .dxg-line path:first-child,
+.gaugeT2 .dxg-line path:last-child {
+  display: none;
+}
+
+.gaugeT2 .dxg-line path{
+  stroke: #777;
+}
+
+.gaugeT2 .dxg-elements text:first-child {
+  -webkit-transform: translate(19px, 13px);
+          transform: translate(19px, 13px);
+}
+
+.gaugeT2 .dxg-elements text:last-child {
+  -webkit-transform: translate(-27px, 14px);
+          transform: translate(-27px, 14px);
+}
+
+.gaugeT2 .dxg-value-indicator path {
+  -webkit-transform: scale(1.2) translate(0, -5px);
+          transform: scale(1.2) translate(0, -5px);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.gaugeT2 .dxg-value-indicator .dxg-title {
+  text-transform: uppercase;
+}
+
+.gaugeT2 .dxg-value-indicator .dxg-title text:first-child {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.gaugeT2 .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+.gaugeT2 .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+  -webkit-transform: translate(0, -109px);
+          transform: translate(0, -109px);
+}
+
+.gaugeT2 .dxg-value-indicator .dxg-spindle-hole {
+  fill: #ffffff;
+}
+
+
+
+
+
+/*--- #gaugeH2 ---*/
+.gaugeH2-color-red {
+  stop-color: #ec643b;
+}
+
+.gaugeH2-color-orange {
+  stop-color: #ed811c;
+}
+
+.gaugeH2-color-yellow {
+  stop-color: #fbe500;
+}
+
+.gaugeH2-color-lightgreen {
+  stop-color: #a7db29;
+}
+
+.gaugeH2-color-green {
+  stop-color: #84db52;
+}
+
+.gradient-mask {
+  visibility: hidden;
+}
+
+.gaugeH2-container {
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gaugeH2 {
+  height: 200px;
+  width: 100%;
+}
+
+.gaugeH2 .dxg-range.dxg-background-range {
+  fill: url(#gradientGaugeH2);
+}
+
+.gaugeH2 .dxg-line {
+  -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+          transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+}
+
+.gaugeH2 .dxg-line path:first-child,
+.gaugeH2 .dxg-line path:last-child {
+  display: none;
+}
+
+.gaugeH2 .dxg-line path{
+  stroke: #777;
+}
+
+.gaugeH2 .dxg-elements text:first-child {
+  -webkit-transform: translate(19px, 13px);
+          transform: translate(19px, 13px);
+}
+
+.gaugeH2 .dxg-elements text:last-child {
+  -webkit-transform: translate(-27px, 14px);
+          transform: translate(-27px, 14px);
+}
+
+.gaugeH2 .dxg-value-indicator path {
+  -webkit-transform: scale(1.2) translate(0, -5px);
+          transform: scale(1.2) translate(0, -5px);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.gaugeH2 .dxg-value-indicator .dxg-title {
+  text-transform: uppercase;
+}
+
+.gaugeH2 .dxg-value-indicator .dxg-title text:first-child {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.gaugeH2 .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+.gaugeH2 .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+  -webkit-transform: translate(0, -109px);
+          transform: translate(0, -109px);
+}
+
+.gaugeH2 .dxg-value-indicator .dxg-spindle-hole {
+  fill: #ffffff;
+}
+
+
+
+
+/*--- #gaugeT3 ---*/
+.gaugeT3-color-red {
+  stop-color: #ec643b;
+}
+
+.gaugeT3-color-orange {
+  stop-color: #ed811c;
+}
+
+.gaugeT3-color-yellow {
+  stop-color: #fbe500;
+}
+
+.gaugeT3-color-lightgreen {
+  stop-color: #a7db29;
+}
+
+.gaugeT3-color-green {
+  stop-color: #84db52;
+}
+
+.gradient-mask {
+  visibility: hidden;
+}
+
+.gaugeT3-container {
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gaugeT3 {
+  height: 200px;
+  width: 100%;
+}
+
+.gaugeT3 .dxg-range.dxg-background-range {
+  fill: url(#gradientGaugeT3);
+}
+
+.gaugeT3 .dxg-line {
+  -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+          transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+}
+
+.gaugeT3 .dxg-line path:first-child,
+.gaugeT3 .dxg-line path:last-child {
+  display: none;
+}
+
+.gaugeT3 .dxg-line path{
+  stroke: #777;
+}
+
+.gaugeT3 .dxg-elements text:first-child {
+  -webkit-transform: translate(19px, 13px);
+          transform: translate(19px, 13px);
+}
+
+.gaugeT3 .dxg-elements text:last-child {
+  -webkit-transform: translate(-27px, 14px);
+          transform: translate(-27px, 14px);
+}
+
+.gaugeT3 .dxg-value-indicator path {
+  -webkit-transform: scale(1.2) translate(0, -5px);
+          transform: scale(1.2) translate(0, -5px);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.gaugeT3 .dxg-value-indicator .dxg-title {
+  text-transform: uppercase;
+}
+
+.gaugeT3 .dxg-value-indicator .dxg-title text:first-child {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.gaugeT3 .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+.gaugeT3 .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+  -webkit-transform: translate(0, -109px);
+          transform: translate(0, -109px);
+}
+
+.gaugeT3 .dxg-value-indicator .dxg-spindle-hole {
+  fill: #ffffff;
+}
+
+
+
+
+/*--- #gaugeH3 ---*/
+.gaugeH3-color-red {
+  stop-color: #ec643b;
+}
+
+.gaugeH3-color-orange {
+  stop-color: #ed811c;
+}
+
+.gaugeH3-color-yellow {
+  stop-color: #fbe500;
+}
+
+.gaugeH3-color-lightgreen {
+  stop-color: #a7db29;
+}
+
+.gaugeH3-color-green {
+  stop-color: #84db52;
+}
+
+.gradient-mask {
+  visibility: hidden;
+}
+
+.gaugeH3-container {
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gaugeH3 {
+  height: 200px;
+  width: 100%;
+}
+
+.gaugeH3 .dxg-range.dxg-background-range {
+  fill: url(#gradientGaugeH3);
+}
+
+.gaugeH3 .dxg-line {
+  -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+          transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+}
+
+.gaugeH3 .dxg-line path:first-child,
+.gaugeH3 .dxg-line path:last-child {
+  display: none;
+}
+
+.gaugeH3 .dxg-line path{
+  stroke: #777;
+}
+
+.gaugeH3 .dxg-elements text:first-child {
+  -webkit-transform: translate(19px, 13px);
+          transform: translate(19px, 13px);
+}
+
+.gaugeH3 .dxg-elements text:last-child {
+  -webkit-transform: translate(-27px, 14px);
+          transform: translate(-27px, 14px);
+}
+
+.gaugeH3 .dxg-value-indicator path {
+  -webkit-transform: scale(1.2) translate(0, -5px);
+          transform: scale(1.2) translate(0, -5px);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.gaugeH3 .dxg-value-indicator .dxg-title {
+  text-transform: uppercase;
+}
+
+.gaugeH3 .dxg-value-indicator .dxg-title text:first-child {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.gaugeH3 .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+.gaugeH3 .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+  -webkit-transform: translate(0, -109px);
+          transform: translate(0, -109px);
+}
+
+.gaugeH3 .dxg-value-indicator .dxg-spindle-hole {
+  fill: #ffffff;
+}
+
+
+
+/*--- #gaugeT4 ---*/
+.gaugeT4-color-red {
+  stop-color: #ec643b;
+}
+
+.gaugeT4-color-orange {
+  stop-color: #ed811c;
+}
+
+.gaugeT4-color-yellow {
+  stop-color: #fbe500;
+}
+
+.gaugeT4-color-lightgreen {
+  stop-color: #a7db29;
+}
+
+.gaugeT4-color-green {
+  stop-color: #84db52;
+}
+
+.gradient-mask {
+  visibility: hidden;
+}
+
+.gaugeT4-container {
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gaugeT4 {
+  height: 200px;
+  width: 100%;
+}
+
+.gaugeT4 .dxg-range.dxg-background-range {
+  fill: url(#gradientGaugeT4);
+}
+
+.gaugeT4 .dxg-line {
+  -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+          transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+}
+
+.gaugeT4 .dxg-line path:first-child,
+.gaugeT4 .dxg-line path:last-child {
+  display: none;
+}
+
+.gaugeT4 .dxg-line path{
+  stroke: #777;
+}
+
+.gaugeT4 .dxg-elements text:first-child {
+  -webkit-transform: translate(19px, 13px);
+          transform: translate(19px, 13px);
+}
+
+.gaugeT4 .dxg-elements text:last-child {
+  -webkit-transform: translate(-27px, 14px);
+          transform: translate(-27px, 14px);
+}
+
+.gaugeT4 .dxg-value-indicator path {
+  -webkit-transform: scale(1.2) translate(0, -5px);
+          transform: scale(1.2) translate(0, -5px);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.gaugeT4 .dxg-value-indicator .dxg-title {
+  text-transform: uppercase;
+}
+
+.gaugeT4 .dxg-value-indicator .dxg-title text:first-child {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.gaugeT4 .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+.gaugeT4 .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+  -webkit-transform: translate(0, -109px);
+          transform: translate(0, -109px);
+}
+
+.gaugeT4 .dxg-value-indicator .dxg-spindle-hole {
+  fill: #ffffff;
+}
+
+
+
+/*--- #gaugeH4 ---*/
+.gaugeH4-color-red {
+  stop-color: #ec643b;
+}
+
+.gaugeH4-color-orange {
+  stop-color: #ed811c;
+}
+
+.gaugeH4-color-yellow {
+  stop-color: #fbe500;
+}
+
+.gaugeH4-color-lightgreen {
+  stop-color: #a7db29;
+}
+
+.gaugeH4-color-green {
+  stop-color: #84db52;
+}
+
+.gradient-mask {
+  visibility: hidden;
+}
+
+.gaugeH4-container {
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gaugeH4 {
+  height: 200px;
+  width: 100%;
+}
+
+.gaugeH4 .dxg-range.dxg-background-range {
+  fill: url(#gradientGaugeH4);
+}
+
+.gaugeH4 .dxg-line {
+  -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+          transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+}
+
+.gaugeH4 .dxg-line path:first-child,
+.gaugeH4 .dxg-line path:last-child {
+  display: none;
+}
+
+.gaugeH4 .dxg-line path{
+  stroke: #777;
+}
+
+.gaugeH4 .dxg-elements text:first-child {
+  -webkit-transform: translate(19px, 13px);
+          transform: translate(19px, 13px);
+}
+
+.gaugeH4 .dxg-elements text:last-child {
+  -webkit-transform: translate(-27px, 14px);
+          transform: translate(-27px, 14px);
+}
+
+.gaugeH4 .dxg-value-indicator path {
+  -webkit-transform: scale(1.2) translate(0, -5px);
+          transform: scale(1.2) translate(0, -5px);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.gaugeH4 .dxg-value-indicator .dxg-title {
+  text-transform: uppercase;
+}
+
+.gaugeH4 .dxg-value-indicator .dxg-title text:first-child {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.gaugeH4 .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+.gaugeH4 .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+  -webkit-transform: translate(0, -109px);
+          transform: translate(0, -109px);
+}
+
+.gaugeH4 .dxg-value-indicator .dxg-spindle-hole {
   fill: #ffffff;
 }

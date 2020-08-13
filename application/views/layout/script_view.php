@@ -28,9 +28,6 @@
     <!-- Bootstrap Tags Input Plugin Js -->
     <script src="<?=base_url()?>asset/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 
-    <!-- noUISlider Plugin Js -->
-    <script src="<?=base_url()?>asset/plugins/nouislider/nouislider.js"></script>
-
     <!-- Jquery Validation Plugin Css -->
     <script src="<?=base_url()?>asset/plugins/jquery-validation/jquery.validate.js"></script>
 
@@ -43,6 +40,17 @@
     <!-- Waves Effect Plugin Js -->
     <script src="<?=base_url()?>asset/plugins/node-waves/waves.js"></script>
 
+    <!-- Jquery DataTable Plugin Js -->
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/jquery.dataTables.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+
     <!-- Autosize Plugin Js -->
     <script src="<?=base_url()?>asset/plugins/autosize/autosize.js"></script>
 
@@ -54,6 +62,9 @@
 
     <!-- Bootstrap Datepicker Plugin Js -->
     <script src="<?=base_url()?>asset/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    
+    <!-- noUISlider Plugin Js -->
+    <script src="<?=base_url()?>asset/plugins/nouislider/nouislider.js"></script>
 
     <!-- Wait Me Plugin Js -->
     <script src="<?=base_url()?>asset/plugins/waitme/waitMe.js"></script>
@@ -71,10 +82,19 @@
     
     <!-- Demo Js -->
     <script src="<?=base_url()?>asset/js/demo.js"></script>
+
     <!-- highchartsr -->
     <script src="<?=base_url()?>asset/plugins/Highcharts/code/highcharts.js"></script>
     <script src="<?=base_url()?>asset/plugins/Highcharts/code/modules/exporting.js"></script>
 
+    <!-- cloudflare -->
+    <script src="<?=base_url()?>asset/plugins/cloudflare/jquery.circliful.js"></script>
+
+    <!-- Date Range Picker -->
+    <script src="<?=base_url()?>asset/plugins/daterangepicker/moment.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/daterangepicker/daterangepicker.min.js"></script>
+
+    
 
 
     <?php 

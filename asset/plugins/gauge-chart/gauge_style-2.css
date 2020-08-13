@@ -1,21 +1,21 @@
-.gauge2-color-green {
-  stop-color: #25cd6b;
-}
-
-.gauge2-color-lightgreen {
-  stop-color: #a7db29;
-}
-
-.gauge2-color-yellow {
-  stop-color: #fbe500;
+.gauge2-color-red {
+  stop-color: #ec643b;
 }
 
 .gauge2-color-orange {
   stop-color: #ed811c;
 }
 
-.gauge2-color-red {
-  stop-color: #e23131;
+.gauge2-color-yellow {
+  stop-color: #fbe500;
+}
+
+.gauge2-color-lightgreen {
+  stop-color: #a7db29;
+}
+
+.gauge2-color-green {
+  stop-color: #84db52;
 }
 
 .gradient-mask {
@@ -52,6 +52,11 @@
   display: none;
 }
 
+.gauge2 .dxg-line path{
+  stroke: #777;
+}
+
+/*
 .gauge2 .dxg-line path:nth-child(2) {
   stroke: #e23131;
 }
@@ -71,6 +76,7 @@
 .gauge2 .dxg-line path:nth-child(6) {
   stroke: #25cd6b;
 }
+*/
 
 .gauge2 .dxg-elements text:first-child {
   -webkit-transform: translate(19px, 13px);
