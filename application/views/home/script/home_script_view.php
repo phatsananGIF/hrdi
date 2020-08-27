@@ -13,6 +13,7 @@
     $("[name=select_site]").change(function() {
         farm_site = $("[name=select_site]").val();
         
+        deleteChild();
         get_data(farm_site);
         
         
@@ -28,7 +29,6 @@
     function get_data(site){
 
         /** create SVG  */
-        deleteChild();
 
         var svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
         svg.setAttribute("class","gradient-mask");
