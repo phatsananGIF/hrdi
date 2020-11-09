@@ -59,6 +59,7 @@
                 $("#not_data_chart").empty();
                 $("#area_chart").empty();
                 $("#legend").empty();
+                $("#data_max_min").empty();
             },
 			success:function(result){
                 
@@ -82,6 +83,36 @@
                              legendItem.find('i').css('margin-right', '2px');
                         $('#legend').append(legendItem);
                     }
+
+                    //show max-min in grap.
+                    var data_max_min = '';
+                    data_max_min +='<tr>';
+                    data_max_min +='<td>อุณหภูมิ สูงสุด</td>';
+                    data_max_min +='<td>'+result.max_min_tavg.max.tavgValue+' ºC</td>';
+                    data_max_min +='<td>'+result.max_min_tavg.max.numdate+'</td>';
+                    data_max_min +='</tr>';
+
+                    data_max_min +='<tr>';
+                    data_max_min +='<td>อุณหภูมิ ต่ำสุด</td>';
+                    data_max_min +='<td>'+result.max_min_tavg.min.tavgValue+' ºC</td>';
+                    data_max_min +='<td>'+result.max_min_tavg.min.numdate+'</td>';
+                    data_max_min +='</tr>';
+
+                    data_max_min +='<tr>';
+                    data_max_min +='<td>ความชื้น สูงสุด</td>';
+                    data_max_min +='<td>'+result.max_min_havg.max.havgValue+' %</td>';
+                    data_max_min +='<td>'+result.max_min_havg.max.numdate+'</td>';
+                    data_max_min +='</tr>';
+
+                    data_max_min +='<tr>';
+                    data_max_min +='<td>ความชื้น ต่ำสุด</td>';
+                    data_max_min +='<td>'+result.max_min_havg.min.havgValue+' %</td>';
+                    data_max_min +='<td>'+result.max_min_havg.min.numdate+'</td>';
+                    data_max_min +='</tr>';
+
+                    $("#data_max_min").html(data_max_min);
+
+
                 }else{
                     $("#not_data_chart").html("Not Data");
                 }

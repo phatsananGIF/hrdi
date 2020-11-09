@@ -98,8 +98,15 @@ class Graph extends CI_Controller {
             $Result = $this->$site->query($query);
             $get_data = $Result->result_array();
 
+            $arr_tavg = [];
+            $arr_havg = [];
+            $max_min_tavg =  [];
+            $max_min_havg =  [];
             foreach($get_data as $item){
                 $data_chart['data_arr'][] = ['numdate' => $item['dt'], 'tavgValue' => $item['tavgValue'], 'havgValue' => $item['havgValue'] ];
+                
+                $arr_tavg[ $item['tavgValue'] ] =  ['numdate' => $item['dt'], 'tavgValue' => $item['tavgValue'] ];
+                $arr_havg[ $item['havgValue'] ] =  ['numdate' => $item['dt'], 'havgValue' => $item['havgValue'] ];
             }
 
             $H_title = array('อุณหภูมิ', 'ความชื้น');
@@ -107,6 +114,21 @@ class Graph extends CI_Controller {
             $data_chart['ykeys'] = $y_title;
             $data_chart['labels'] = $H_title;
             $data_chart['lineColors'] = array('#fc5603', '#0e9dc4');
+
+            if(count($arr_tavg)!=0 ){
+                ksort($arr_tavg);
+                $key_arr_tavg = array_keys($arr_tavg);
+                $max_min_tavg['max'] = $arr_tavg[ end($key_arr_tavg) ];
+                $max_min_tavg['min'] = $arr_tavg[ reset($key_arr_tavg) ];
+            }
+
+            if(count($arr_havg)!=0 ){
+                ksort($arr_havg);
+                $key_arr_havg = array_keys($arr_havg);
+                $max_min_havg['max'] = $arr_havg[ end($key_arr_havg) ];
+                $max_min_havg['min'] = $arr_havg[ reset($key_arr_havg) ];
+            }
+
 
             /*
             echo '<pre>';
@@ -116,6 +138,8 @@ class Graph extends CI_Controller {
 
             $data_result['get_data'] = $get_data;
             $data_result['data_chart'] = $data_chart;
+            $data_result['max_min_tavg'] = $max_min_tavg;
+            $data_result['max_min_havg'] = $max_min_havg;
             echo json_encode($data_result);
             return;
 
@@ -124,6 +148,7 @@ class Graph extends CI_Controller {
         exit();
 
     }// fn.get_data_chart
+
 
 
     public function time2String($time = ""){

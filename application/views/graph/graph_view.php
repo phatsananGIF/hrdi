@@ -41,6 +41,9 @@
                 <div id="not_data_chart" style="margin-top:5px;" align="center"></div>
                 <div id="area_chart" class="graph"></div>
                 <div id="legend" class="donut-legend" align="center"></div>
+
+                <table id="data_max_min" style="margin-top:5px;" class="table table-hover dashboard-task-infos">
+                </table>
             </div>        
         </div>
 
