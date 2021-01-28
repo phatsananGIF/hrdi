@@ -41,15 +41,15 @@
     <script src="<?=base_url()?>asset/plugins/node-waves/waves.js"></script>
 
     <!-- Jquery DataTable Plugin Js -->
-    <script src="<?=base_url()?>asset/plugins/jquery-datatable/jquery.dataTables.js"></script>
-    <script src="<?=base_url()?>asset/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
-    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
-    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
-    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
-    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
-    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
-    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
-    <script src="<?=base_url()?>asset/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/js- v.1.10.23/jquery.dataTables.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/js- v.1.10.23/dataTables.buttons.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/js- v.1.10.23/buttons.flash.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/js- v.1.10.23/jszip.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/js- v.1.10.23/pdfmake.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/js- v.1.10.23/vfs_fonts.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/js- v.1.10.23/buttons.html5.min.js"></script>
+    <script src="<?=base_url()?>asset/plugins/jquery-datatable/js- v.1.10.23/buttons.print.min.js"></script>
 
     <!-- Autosize Plugin Js -->
     <script src="<?=base_url()?>asset/plugins/autosize/autosize.js"></script>

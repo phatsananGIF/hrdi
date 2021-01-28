@@ -17,7 +17,9 @@
     <link href="<?=base_url()?>asset/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- JQuery DataTable Css -->
-    <link href="<?=base_url()?>asset/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- <link href="<?=base_url()?>asset/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet"> -->
+    <link href="<?=base_url()?>asset/plugins/jquery-datatable/skin/bootstrap/css/jquery.dataTables.css" rel="stylesheet">
+    <link href="<?=base_url()?>asset/plugins/jquery-datatable/skin/bootstrap/css/buttons.dataTables.css" rel="stylesheet">
 
     <!-- Waves Effect Css -->
     <link href="<?=base_url()?>asset/plugins/node-waves/waves.css" rel="stylesheet" />
@@ -160,7 +162,7 @@
                     </li>
 
                 <?php if($this->session->group == 'Supper_admin'){ ?>
-                    <li <?php if($active == 'log_control' || $active == 'log_program'){ echo 'class="active"';} ?> >
+                    <li <?php if($active == 'log_control' || $active == 'log_program' || $active == 'log_tavg_and_havg'){ echo 'class="active"';} ?> >
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">format_list_bulleted</i>
                             <span>Log</span>
@@ -174,6 +176,11 @@
                             <li <?php if($active == 'log_program'){ echo 'class="active"';} ?> >
                                 <a href="<?=base_url()?>log/log_program">
                                     <span>Log ตั้งโปรแกรม</span>
+                                </a>
+                            </li>
+                            <li <?php if($active == 'log_tavg_and_havg'){ echo 'class="active"';} ?> >
+                                <a href="<?=base_url()?>log/log_tavg_and_havg">
+                                    <span>Log อุณหภูมิและความชื้น</span>
                                 </a>
                             </li>
                         </ul>
